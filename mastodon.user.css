@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon v5 overrides
 @namespace      github.com/damianwalsh/user-styles
-@version        1.0.2
+@version        1.0.3
 @description    Mastodon v5.0 Overrides
 @author         Damian Walsh
 @updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
@@ -42,5 +42,10 @@
 
   .notification-group__icon {
     width: unset;
+  }
+
+  /* round buttons */
+  .account__relationship .icon-button,.explore-suggestions-card .icon-button {
+    border-radius: 999px;
   }
 }

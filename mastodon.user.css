@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon v5 overrides
 @namespace      github.com/damianwalsh/user-styles
-@version        1.0.0
+@version        1.0.1
 @description    Mastodon v5.0 Overrides
 @author         Damian Walsh
 @updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
@@ -24,5 +24,13 @@
   ._comp_card__clamp {
     line-clamp: none;
     -webkit-line-clamp: none;
+  }
+
+  /* post content and footer span both columns below the header */
+  ._comp_status__spoiler,
+  ._comp_status__translate,
+  ._comp_status__contentWrapper,
+  ._comp_status__footer {
+    grid-column: 1 / -1;
   }
 }

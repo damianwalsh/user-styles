@@ -48,4 +48,9 @@
   .account__relationship .icon-button,.explore-suggestions-card .icon-button {
     border-radius: 999px;
   }
+
+  /* remove background image from messages */
+  ._comp_status__isMessage:before {
+    content: none;
+  } 
 }

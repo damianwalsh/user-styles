@@ -1,0 +1,28 @@
+/* ==UserStyle==
+@name           Mastodon v5 overrides
+@namespace      github.com/damianwalsh/user-styles
+@version        1.0.0
+@description    Mastodon v5.0 Overrides
+@author         Damian Walsh
+@updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
+==/UserStyle== */
+
+@-moz-document url-prefix("https://mastodon.social/") {
+
+  /* overrides default indigo light scheme with grey */
+  [data-color-scheme=light] {
+    --base-color-bg: var(--color-grey-50);
+    --base-color-bg-desktop: var(--color-grey-100);
+    --base-color-fg: var(--color-grey-950);
+    --base-color-fg-on-accent: var(--base-color-bg);
+    --base-color-fg-accent: var(--color-grey-700);
+    --base-color-bg-accent: var(--color-grey-600);
+    --color-bg-brand-base: var(--color-indigo-700);
+  }
+
+  /* removes 2 line restriction on quote post previews */
+  ._comp_card__clamp {
+    line-clamp: none;
+    -webkit-line-clamp: none;
+  }
+}

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon v5 overrides
 @namespace      github.com/damianwalsh/user-styles
-@version        1.0.9
+@version        1.1.0
 @description    Mastodon v5.0 Overrides
 @author         Damian Walsh
 @updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
@@ -113,7 +113,7 @@
     --base-color-bg-accent: var(--color-grey-600);
     --color-bg-brand-base: var(--color-indigo-700);
   }
-  
+
   /* overrides default indigo dark scheme with grey */
   [data-color-scheme=dark] {
     --base-color-bg: var(--color-grey-950);
@@ -134,12 +134,21 @@
 
       ._compose_redesign_trigger__root {
         position-anchor: --new-post;
-        display: block;
         inset: auto;
+        top: var(--space-4);
         left: calc(anchor(right) + var(--space-2));
         bottom: anchor(bottom);
         right: var(--space-4);
         max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      ._compose_redesign_trigger__composer {
+        min-height: 0;
+        max-height: 100%;
+        overflow: auto;
       }
 
       ._compose_redesign__root {

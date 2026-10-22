@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon v5 overrides
 @namespace      github.com/damianwalsh/user-styles
-@version        1.1.0
+@version        1.1.1
 @description    Mastodon v5.0 Overrides
 @author         Damian Walsh
 @updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
@@ -196,5 +196,11 @@
   ._compose_redesign__background {
     background-color: inherit;
     mask-image: none;
+  }
+
+  /* add border around success badge */
+  ._comp_badge__success {
+    border: var(--border-default);
+    border-color: var(--color-bg-success-soft);
   }
 }

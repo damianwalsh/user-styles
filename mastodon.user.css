@@ -1,13 +1,105 @@
 /* ==UserStyle==
 @name           Mastodon v5 overrides
 @namespace      github.com/damianwalsh/user-styles
-@version        1.0.5
+@version        1.0.6
 @description    Mastodon v5.0 Overrides
 @author         Damian Walsh
 @updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://mastodon.social/") {
+
+  /* remove indigo tint from grey - consistent lightness + chroma across hues */
+  :root {
+    --color-indigo-50: oklch(98% 0.01 286.3);
+    --color-lime-50: oklch(98% 0.01 123.5);
+    --color-pink-50: oklch(98% 0.01 335.2);
+    --color-orange-50: oklch(98% 0.01 45.8);
+    --color-cyan-50: oklch(98% 0.01 222.2);
+    --color-red-50: oklch(98% 0.01 25.4);
+    --color-green-50: oklch(98% 0.01 147.8);
+    --color-grey-50: oklch(98% 0 0);
+    --color-indigo-100: oklch(93.88% 0.028 286.3);
+    --color-lime-100: oklch(93.88% 0.028 123.5);
+    --color-pink-100: oklch(93.88% 0.028 335.2);
+    --color-orange-100: oklch(93.88% 0.028 45.8);
+    --color-cyan-100: oklch(93.88% 0.028 222.2);
+    --color-red-100: oklch(93.88% 0.028 25.4);
+    --color-green-100: oklch(93.88% 0.028 147.8);
+    --color-grey-100: oklch(93.88% 0 0);
+    --color-indigo-200: oklch(89% 0.07 286.3);
+    --color-lime-200: oklch(89% 0.07 123.5);
+    --color-pink-200: oklch(89% 0.07 335.2);
+    --color-orange-200: oklch(89% 0.07 45.8);
+    --color-cyan-200: oklch(89% 0.07 222.2);
+    --color-red-200: oklch(89% 0.07 25.4);
+    --color-green-200: oklch(89% 0.07 147.8);
+    --color-grey-200: oklch(89% 0 0);
+    --color-indigo-300: oklch(83.38% 0.12 286.3);
+    --color-lime-300: oklch(83.38% 0.12 123.5);
+    --color-pink-300: oklch(83.38% 0.12 335.2);
+    --color-orange-300: oklch(83.38% 0.12 45.8);
+    --color-cyan-300: oklch(83.38% 0.12 222.2);
+    --color-red-300: oklch(83.38% 0.12 25.4);
+    --color-green-300: oklch(83.38% 0.12 147.8);
+    --color-grey-300: oklch(83.38% 0 0);
+    --color-indigo-400: oklch(77% 0.162 286.3);
+    --color-lime-400: oklch(77% 0.162 123.5);
+    --color-pink-400: oklch(77% 0.162 335.2);
+    --color-orange-400: oklch(77% 0.162 45.8);
+    --color-cyan-400: oklch(77% 0.162 222.2);
+    --color-red-400: oklch(77% 0.162 25.4);
+    --color-green-400: oklch(77% 0.162 147.8);
+    --color-grey-400: oklch(77% 0 0);
+    --color-indigo-500: oklch(69.88% 0.18 286.3);
+    --color-lime-500: oklch(69.88% 0.18 123.5);
+    --color-pink-500: oklch(69.88% 0.18 335.2);
+    --color-orange-500: oklch(69.88% 0.18 45.8);
+    --color-cyan-500: oklch(69.88% 0.18 222.2);
+    --color-red-500: oklch(69.88% 0.18 25.4);
+    --color-green-500: oklch(69.88% 0.18 147.8);
+    --color-grey-500: oklch(69.88% 0 0);
+    --color-indigo-600: oklch(62% 0.165 286.3);
+    --color-lime-600: oklch(62% 0.165 123.5);
+    --color-pink-600: oklch(62% 0.165 335.2);
+    --color-orange-600: oklch(62% 0.165 45.8);
+    --color-cyan-600: oklch(62% 0.165 222.2);
+    --color-red-600: oklch(62% 0.165 25.4);
+    --color-green-600: oklch(62% 0.165 147.8);
+    --color-grey-600: oklch(62% 0 0);
+    --color-indigo-700: oklch(53.38% 0.131 286.3);
+    --color-lime-700: oklch(53.38% 0.131 123.5);
+    --color-pink-700: oklch(53.38% 0.131 335.2);
+    --color-orange-700: oklch(53.38% 0.131 45.8);
+    --color-cyan-700: oklch(53.38% 0.131 222.2);
+    --color-red-700: oklch(53.38% 0.131 25.4);
+    --color-green-700: oklch(53.38% 0.131 147.8);
+    --color-grey-700: oklch(53.38% 0 0);
+    --color-indigo-800: oklch(44% 0.089 286.3);
+    --color-lime-800: oklch(44% 0.089 123.5);
+    --color-pink-800: oklch(44% 0.089 335.2);
+    --color-orange-800: oklch(44% 0.089 45.8);
+    --color-cyan-800: oklch(44% 0.089 222.2);
+    --color-red-800: oklch(44% 0.089 25.4);
+    --color-green-800: oklch(44% 0.089 147.8);
+    --color-grey-800: oklch(44% 0 0);
+    --color-indigo-900: oklch(33.88% 0.055 286.3);
+    --color-lime-900: oklch(33.88% 0.055 123.5);
+    --color-pink-900: oklch(33.88% 0.055 335.2);
+    --color-orange-900: oklch(33.88% 0.055 45.8);
+    --color-cyan-900: oklch(33.88% 0.055 222.2);
+    --color-red-900: oklch(33.88% 0.055 25.4);
+    --color-green-900: oklch(33.88% 0.055 147.8);
+    --color-grey-900: oklch(33.88% 0 0);
+    --color-indigo-950: oklch(23% 0.04 286.3);
+    --color-lime-950: oklch(23% 0.04 123.5);
+    --color-pink-950: oklch(23% 0.04 335.2);
+    --color-orange-950: oklch(23% 0.04 45.8);
+    --color-cyan-950: oklch(23% 0.04 222.2);
+    --color-red-950: oklch(23% 0.04 25.4);
+    --color-green-950: oklch(23% 0.04 147.8);
+    --color-grey-950: oklch(23% 0 0);
+  }
 
   /* overrides default indigo light scheme with grey */
   [data-color-scheme=light] {
@@ -45,17 +137,18 @@
   }
 
   /* round buttons */
-  .account__relationship .icon-button,.explore-suggestions-card .icon-button {
+  .account__relationship .icon-button,
+  .explore-suggestions-card .icon-button {
     border-radius: 999px;
   }
 
   /* remove background image from messages */
   ._comp_status__isMessage:before {
     content: none;
-  } 
+  }
 
   ._compose_redesign__background {
-      background-color: inherit;
-      mask-image: none;
+    background-color: inherit;
+    mask-image: none;
   }
 }

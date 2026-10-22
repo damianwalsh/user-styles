@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon v5 overrides
 @namespace      github.com/damianwalsh/user-styles
-@version        1.0.8
+@version        1.0.9
 @description    Mastodon v5.0 Overrides
 @author         Damian Walsh
 @updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
@@ -123,6 +123,30 @@
     --base-color-fg-accent: var(--color-grey-300);
     --base-color-bg-accent: var(--color-grey-400);
     --color-bg-brand-base: var(--color-indigo-300);
+  }
+
+  /* Position new post composer alongside trigger button on desktop. */
+  @media (min-width: 760px) {
+    @supports (position-anchor: --new-post) and (left: anchor(right)) {
+      ._navigation_panel_redesign__newPostButton>button {
+        anchor-name: --new-post;
+      }
+
+      ._compose_redesign_trigger__root {
+        position-anchor: --new-post;
+        display: block;
+        inset: auto;
+        left: calc(anchor(right) + var(--space-2));
+        bottom: anchor(bottom);
+        right: var(--space-4);
+        max-width: 600px;
+      }
+
+      ._compose_redesign__root {
+        border-radius: var(--radius-6);
+        border-bottom: var(--border-default);
+      }
+    }
   }
 
   /* removes 2 line restriction on quote post previews */

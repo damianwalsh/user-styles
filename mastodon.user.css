@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon v5 overrides
 @namespace      github.com/damianwalsh/user-styles
-@version        1.0.7
+@version        1.0.8
 @description    Mastodon v5.0 Overrides
 @author         Damian Walsh
 @updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
@@ -112,6 +112,17 @@
     --base-color-fg-accent: var(--color-grey-700);
     --base-color-bg-accent: var(--color-grey-600);
     --color-bg-brand-base: var(--color-indigo-700);
+  }
+  
+  /* overrides default indigo dark scheme with grey */
+  [data-color-scheme=dark] {
+    --base-color-bg: var(--color-grey-950);
+    --base-color-bg-desktop: var(--color-grey-900);
+    --base-color-fg: var(--color-grey-50);
+    --base-color-fg-on-accent: var(--base-color-bg);
+    --base-color-fg-accent: var(--color-grey-300);
+    --base-color-bg-accent: var(--color-grey-400);
+    --color-bg-brand-base: var(--color-indigo-300);
   }
 
   /* removes 2 line restriction on quote post previews */

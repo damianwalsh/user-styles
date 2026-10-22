@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon v5 overrides
 @namespace      github.com/damianwalsh/user-styles
-@version        1.1.1
+@version        1.1.2
 @description    Mastodon v5.0 Overrides
 @author         Damian Walsh
 @updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
@@ -104,7 +104,7 @@
   }
 
   /* overrides default indigo light scheme with grey */
-  [data-color-scheme=light] {
+  [data-color-scheme=light][data-theme-color="indigo"] {
     --base-color-bg: var(--color-grey-50);
     --base-color-bg-desktop: var(--color-grey-100);
     --base-color-fg: var(--color-grey-950);
@@ -115,7 +115,7 @@
   }
 
   /* overrides default indigo dark scheme with grey */
-  [data-color-scheme=dark] {
+  [data-color-scheme=dark][data-theme-color="indigo"] {
     --base-color-bg: var(--color-grey-950);
     --base-color-bg-desktop: var(--color-grey-900);
     --base-color-fg: var(--color-grey-50);

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon v5 overrides
 @namespace      github.com/damianwalsh/user-styles
-@version        1.1.3
+@version        1.1.4
 @description    Mastodon v5.0 Overrides
 @author         Damian Walsh
 @updateURL    https://raw.githubusercontent.com/damianwalsh/user-styles/main/mastodon.user.css
@@ -132,7 +132,7 @@
         anchor-name: --new-post;
       }
 
-      ._compose_redesign_trigger__root {
+      ._feat_compose_trigger__root[data-fullscreen=false] {
         position-anchor: --new-post;
         inset: auto;
         top: var(--space-4);
@@ -145,13 +145,13 @@
         justify-content: flex-end;
       }
 
-      ._compose_redesign_trigger__composer {
+      [data-fullscreen=false] ._feat_compose_trigger__composer {
         min-height: 0;
         max-height: 100%;
         overflow: auto;
       }
 
-      ._compose_redesign__root {
+      [data-fullscreen=false] ._feat_compose__root {
         border-radius: var(--radius-6);
         border-bottom: var(--border-default);
       }

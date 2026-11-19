@@ -128,32 +128,18 @@
   /* Position new post composer alongside trigger button on desktop. */
   @media (min-width: 760px) {
     @supports (position-anchor: --new-post) and (left: anchor(right)) {
-      ._feat_navigation_panel__newPostButton>button {
+
+      ._feat_navigation_panel_header__newPostButton {
         anchor-name: --new-post;
       }
 
-      ._feat_compose_trigger__root[data-fullscreen=false] {
+      ._feat_compose_trigger__composer {
         position-anchor: --new-post;
         inset: auto;
-        top: var(--space-4);
-        left: calc(anchor(right) + var(--space-2));
-        bottom: anchor(bottom);
-        right: var(--space-4);
-        max-width: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-
-      [data-fullscreen=false] ._feat_compose_trigger__composer {
-        min-height: 0;
-        max-height: 100%;
-        overflow: auto;
-      }
-
-      [data-fullscreen=false] ._feat_compose__root {
-        border-radius: var(--radius-6);
-        border-bottom: var(--border-default);
+        top: anchor(top);
+        left: anchor(right);
+        transform: translate(0, 0);
+        transition: none;
       }
     }
   }

@@ -186,18 +186,7 @@
   }
 
   /* remove background image from messages */
-  ._comp_status__isMessage:before {
-    content: none;
-  }
-
-  ._compose_redesign__background {
-    background-color: inherit;
-    mask-image: none;
-  }
-
-  /* add border around success badge */
-  ._comp_badge__success {
-    border: var(--border-default);
-    border-color: var(--color-bg-success-soft);
+  ._feat_direct_timeline__conversation:before {
+    display: none
   }
 }
